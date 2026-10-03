@@ -36,7 +36,7 @@ function getGreeting(){
     
 }
 
-const developmentMode = true;
+const developmentMode = false;
 
 updateClock();
 if (!developmentMode){
