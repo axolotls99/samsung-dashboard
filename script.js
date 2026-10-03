@@ -38,3 +38,4 @@ function getGreeting(){
 updateClock();
 getWeather();
 setInterval(updateClock, 1000);
+setInterval(getWeather, 600000); /*ever y10 minutes*/
