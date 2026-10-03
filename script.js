@@ -35,7 +35,13 @@ async function getWeather(){
 function getGreeting(){
     
 }
+
+const developmentMode = true;
+
 updateClock();
-getWeather();
+if (!developmentMode){
+    getWeather();
+}
+
 setInterval(updateClock, 1000);
 setInterval(getWeather, 600000); /*ever y10 minutes*/
