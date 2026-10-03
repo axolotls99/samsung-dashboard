@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -12,10 +15,17 @@
         <div id="dashboard">
             <div class = "card" id = "notification"><p>notification</p></div>
             <div class = "card" id = "clock"><p></p></div>
-            <div class = "card" id = "greeting"><p>greeting</p></div>
             <div class = "card" id = "calendar"><p>calendar</p></div>
             <div class = "card" id = "transit"><p>transit</p></div>
             <div class = "card" id = "photo"><p>photo</p></div>
+            <div class = "card" id = "weather">
+                <p class = "big" id = "ctemperature"></p>
+                <p class = "small" id = desctemperature></p>
+                <p>&nbsp;</p>
+                <p>Feels Like: <span id = "ftemperature"></span></p>
+                <p>Min: <span id = "mintemperature"></span>&nbsp;&nbsp;&nbsp;Max: <span id = "maxtemperature"></span></p>
+                <p><span id = "raintemperature"></span>% Chance Rain</p>
+            </div>
         </div>
     </main>
 

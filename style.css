@@ -11,6 +11,13 @@
     --border: hsl(var(--hue), var(--saturation), 70%);
 }
 
+.dm-sans {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .dark {
     --background: hsl(var(--hue), var(--saturation), 8%);
     --card: hsl(var(--hue), var(--saturation), 15%);
@@ -26,12 +33,12 @@ html, body, main {
 }
 
 body{
-    font-family:sans-serif;
+    font-family: "DM Sans", sans-serif;
     display:flex;
     align-items: center;
     justify-content: center;
     background: var(--background);
-    color: var(--text)
+    color: var(--text);
 }
 
 #dashboard{
@@ -40,8 +47,8 @@ body{
     height:90%;
     margin: 1em;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 5fr 5fr;
-    gap: 1em;
+    grid-template-rows: 2em 10fr 10fr;
+    gap: 0.7em;
     /*background: green; */
     /*border: 5px solid red; */
 }
@@ -52,11 +59,15 @@ body{
     border: 2px solid var(--border);
     border-radius: 15px;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items: center;
 
 }
     
+.big{font-size: 5cqw;}
+.small{font-weight: 300; font-size: 2.2cqw;}
+
 
 
 #notification {
@@ -64,6 +75,7 @@ body{
     grid-column-end:4;
     grid-row-start:1;
     grid-row-end:2;
+    border-radius: 0px;
 }
 
 #clock{
@@ -95,4 +107,16 @@ body{
     grid-column-end:4;
     grid-row-start:3;
     grid-row-end:4;   
+}
+
+#weather{
+    gap:0.4em;
+    grid-column-start:3;
+    grid-column-end: 4;
+    grid-row-start:2;
+    grid-row-end: 3;
+}
+
+#weather p{
+    margin:0;
 }
