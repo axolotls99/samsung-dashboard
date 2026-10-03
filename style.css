@@ -1,3 +1,24 @@
+/*global style colors*/
+/*chatgpt theme engine*/
+:root {
+    --hue: 180;
+    --saturation: 50%;
+    
+    --background: hsl(var(--hue), var(--saturation), 96%);
+    --card: hsl(var(--hue), var(--saturation), 90%);
+    --text: hsl(var(--hue), var(--saturation), 10%);
+    --text-dim: hsl(var(--hue), var(--saturation), 40%);
+    --border: hsl(var(--hue), var(--saturation), 70%);
+}
+
+.dark {
+    --background: hsl(var(--hue), var(--saturation), 8%);
+    --card: hsl(var(--hue), var(--saturation), 15%);
+    --text: hsl(var(--hue), var(--saturation), 95%);
+    --text-dim: hsl(var(--hue), var(--saturation), 65%);
+    --border: hsl(var(--hue), var(--saturation), 30%);
+}
+
 html, body, main {
     margin:0;
     width:100%;
@@ -9,6 +30,8 @@ body{
     display:flex;
     align-items: center;
     justify-content: center;
+    background: var(--background);
+    color: var(--text)
 }
 
 #dashboard{
@@ -19,16 +42,22 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 5fr 5fr;
     gap: 1em;
-    background: green;
-    border: 5px solid red;
+    /*background: green; */
+    /*border: 5px solid red; */
 }
 
 
 .card{
-    background: blue;
-    border: 2px solid yellow;
-    
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: 15px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+
 }
+    
+
 
 #notification {
     grid-column-start:1;
@@ -42,6 +71,9 @@ body{
     grid-column-end:2;
     grid-row-start:2;
     grid-row-end:3;
+    container-type: size;
+    font-size: 5cqw; /*cqw= percent width of container*/
+
 }
 
 #greeting{
